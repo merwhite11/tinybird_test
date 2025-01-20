@@ -6,6 +6,6 @@ SQL >
     %
     SELECT * FROM cuckoo_test
     WHERE country_user={{String(country, 'US')}}
-    AND user_id > {{Int16(user_id, 500)}}
+    AND user_id > {{Int16(user_id, 700)}}
 
 
