@@ -7,6 +7,6 @@ SQL >
 
     SELECT * FROM tinybird.pipe_stats_rt
     WHERE pipe_id = 't_a191fb0596ed44408a6317729034c402'
-    ORDER BY start_datetime desc
+    ORDER BY start_datetime asc
 
 
