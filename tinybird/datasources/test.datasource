@@ -1,0 +1,15 @@
+TOKEN "test_token" APPEND
+
+DESCRIPTION >
+    Generated from test.ndjson
+
+SCHEMA >
+    `active` UInt8 `json:$.active`,
+    `age` Nullable(Int16) `json:$.age`,
+    `height` Nullable(Float32) `json:$.height`,
+    `id` Int16 `json:$.id`,
+    `name` String `json:$.name`,
+    `timestamp` String `json:$.timestamp`
+
+ENGINE "MergeTree"
+ENGINE_SORTING_KEY "id, name, timestamp"

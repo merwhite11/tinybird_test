@@ -1,0 +1,11 @@
+TOKEN "token_181673" APPEND
+
+
+SCHEMA >
+    `amount` Int64 `json:$.amount`,
+    `timestamp` DateTime `json:$.timestamp`,
+    `transaction_id` String `json:$.transaction_id`
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYYYYMM(timestamp)"
+ENGINE_SORTING_KEY "transaction_id, timestamp"
