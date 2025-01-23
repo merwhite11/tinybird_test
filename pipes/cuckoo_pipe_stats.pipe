@@ -1,0 +1,12 @@
+DESCRIPTION >
+	get request_id of reqs to cuckoo_test_pipe
+
+
+NODE get_pipe_stats
+SQL >
+
+    SELECT * FROM tinybird.pipe_stats_rt
+    WHERE pipe_id = 't_a191fb0596ed44408a6317729034c402'
+    ORDER BY start_datetime desc
+
+

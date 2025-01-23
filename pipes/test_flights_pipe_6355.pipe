@@ -1,0 +1,13 @@
+TOKEN "test_flights_pipe_6355_endpoint_read_7309" READ
+
+NODE test_flights_pipe_6355_0
+SQL >
+
+    %
+    SELECT name, age, airline, priority_boarding, timestamp, passport_number FROM test_flights
+    WHERE passport_number<{{Int32(my_param, 8000000)}}
+    AND airline={{String(param, 'EasyPlane')}}
+    AND priority_boarding={{UInt8(boarding, 1)}}
+    ORDER BY timestamp DESC
+
+

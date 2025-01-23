@@ -1,0 +1,14 @@
+
+SCHEMA >
+    `artist` String,
+    `country_user` String,
+    `date` DateTime64(3),
+    `fecha_liquidacion` Date,
+    `genre` String,
+    `label` String,
+    `product_title` String,
+    `user_id` Int32
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYear(date)"
+ENGINE_SORTING_KEY "date, label, product_title, user_id"

@@ -1,0 +1,9 @@
+NODE get_ops_log_0
+SQL >
+
+    SELECT event_type, Options.Names, Options.Values, cpu_time FROM tinybird.datasources_ops_log
+    WHERE
+    datasource_id = 't_090699a8dd1440edb3d5c698081817c5'
+    ORDER BY cpu_time DESC
+
+
