@@ -1,0 +1,6 @@
+NODE get_count_by_date
+SQL >
+    SELECT toDate(date) as date, count(*) as row_count FROM xl_dataset
+    GROUP BY date
+TYPE Materialized
+DATASOURCE count_by_date

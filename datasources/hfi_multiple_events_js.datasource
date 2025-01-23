@@ -1,0 +1,9 @@
+
+SCHEMA >
+    `action` String `json:$.action`,
+    `city` String `json:$.city`,
+    `date` DateTime64(3) `json:$.date`
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYear(date)"
+ENGINE_SORTING_KEY "date, action, city"
