@@ -1,14 +1,2 @@
 
-SCHEMA >
-    `artist` String `json:$.artist`,
-    `country_user` String `json:$.country_user`,
-    `date` DateTime64(3) `json:$.date`,
-    `fecha_liquidacion` Date `json:$.fecha_liquidacion`,
-    `genre` String `json:$.genre`,
-    `label` String `json:$.label`,
-    `product_title` String `json:$.product_title`,
-    `user_id` Int16 `json:$.user_id`
 
-ENGINE "MergeTree"
-ENGINE_PARTITION_KEY "toYear(date)"
-ENGINE_SORTING_KEY "date, label, product_title, user_id"

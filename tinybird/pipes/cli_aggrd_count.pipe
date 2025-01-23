@@ -1,0 +1,7 @@
+NODE get_aggrd_count
+SQL >
+    SELECT
+        date,
+        countMerge(row_count) AS row_count
+    FROM count_by_date
+    GROUP BY date
