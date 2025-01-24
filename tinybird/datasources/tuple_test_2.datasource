@@ -1,0 +1,4 @@
+SCHEMA >
+    `a` Tuple(UInt8, String)
+
+ENGINE "MergeTree"
