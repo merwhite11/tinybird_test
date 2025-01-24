@@ -1,0 +1,9 @@
+TOKEN "cuckoo2_pipe_endpoint_read_2796" READ
+
+NODE get_label_userid
+SQL >
+    %
+    SELECT * FROM cuckoo2_test
+    WHERE label={{String(label, 'Label_59')}}
+    AND user_id > {{Int16(user_id, 100)}}
+    ORDER BY user_id asc

@@ -1,0 +1,12 @@
+TOKEN "token_616054" APPEND
+
+
+SCHEMA >
+    `city` String `json:$.city`,
+    `date` DateTime `json:$.date`,
+    `action` String `json:$.action`,
+    `country` String `json:$.country`
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYear(date)"
+ENGINE_SORTING_KEY "date, city"

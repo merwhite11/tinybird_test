@@ -1,0 +1,7 @@
+SCHEMA >
+    `date` Date,
+    `passenger_count` AggregateFunction(sum, Int16)
+
+ENGINE "AggregatingMergeTree"
+ENGINE_PARTITION_KEY "toYYYYMM(date)"
+ENGINE_SORTING_KEY "date"

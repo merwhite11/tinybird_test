@@ -1,0 +1,7 @@
+NODE get_sum_passenger_count
+SQL >
+    SELECT
+        date,
+        sumMerge(passenger_count) as passenger_count
+    FROM trip_passenger_count_mv
+    GROUP BY date

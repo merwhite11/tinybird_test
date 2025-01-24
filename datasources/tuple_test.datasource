@@ -1,0 +1,6 @@
+
+SCHEMA >
+    `id` Tuple(UInt8, String) `json:$.id`
+
+ENGINE "MergeTree"
+ENGINE_SORTING_KEY "id"

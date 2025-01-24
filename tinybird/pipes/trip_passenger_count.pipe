@@ -1,0 +1,10 @@
+NODE group_by_date
+SQL >
+    SELECT toDate(tpep_pickup_datetime) as date, 
+    sumState(passenger_count) as passenger_count 
+    FROM trip_data
+    GROUP BY date
+    ORDER BY date ASC
+
+TYPE Materialized
+DATASOURCE trip_passenger_count_mv
