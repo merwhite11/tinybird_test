@@ -1,0 +1,9 @@
+NODE transform_to_tuple_0
+SQL >
+
+    SELECT tuple(1, 'a') as x
+    FROM tuple_test
+TYPE Materialized
+DATASOURCE tuple_test_mv
+
+

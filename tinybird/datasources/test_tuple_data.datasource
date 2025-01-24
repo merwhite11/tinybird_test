@@ -1,0 +1,7 @@
+
+SCHEMA >
+    `column_00` String,
+    `column_01` String
+
+ENGINE "MergeTree"
+ENGINE_SORTING_KEY "column_00, column_01"

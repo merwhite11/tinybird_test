@@ -18,4 +18,4 @@
           data_project_dir: ./tinybird
         secrets:
           tb_admin_token: ${{ secrets.TB_ADMIN_TOKEN }}
-          tb_host: https://api.tinybird.co
+          tb_host: ${{secrets.TB_HOST}}
