@@ -1,10 +1,8 @@
-
 SCHEMA >
     `artist` String,
     `country_user` String,
     `date` DateTime64(3),
     `fecha_liquidacion` Date,
-    `genre` String,
     `label` String,
     `product_title` String,
     `user_id` Int32

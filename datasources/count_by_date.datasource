@@ -1,9 +1,0 @@
-# Data Source created from Pipe 't_ff536c56fac14f57af0b66f9d104278e'
-
-SCHEMA >
-    `date` Date,
-    `row_count` AggregateFunction(count)
-
-ENGINE "AggregatingMergeTree"
-ENGINE_PARTITION_KEY "toYYYYMM(date)"
-ENGINE_SORTING_KEY "date"

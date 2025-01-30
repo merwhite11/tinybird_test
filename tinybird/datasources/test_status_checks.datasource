@@ -1,0 +1,17 @@
+SCHEMA >
+    `timestamp` DateTime `json:$.timestamp`,
+    `monitor_id` UInt32 `json:$.monitor_id`,
+    `status_code` UInt16 `json:$.status_code`,
+    `response_time` UInt32 `json:$.response_time`,
+    `region` LowCardinality(String) `json:$.region`
+
+ENGINE MergeTree
+ENGINE_PARTITION_KEY toYYYYMM(timestamp)
+ENGINE_SORTING_KEY timestamp, monitor_id, region
+ENGINE_TTL timestamp + toIntervalDay(90)
+ENGINE_SETTINGS index_granularity=4096
+
+INDEXES >
+    INDEX idx_monitor monitor_id TYPE bloom_filter GRANULARITY 2,
+    INDEX idx_region region TYPE bloom_filter GRANULARITY 2,
+    INDEX idx_status_code status_code TYPE bloom_filter GRANULARITY 3

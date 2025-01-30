@@ -1,0 +1,7 @@
+NODE get_count_by_date
+SQL >
+    SELECT toDate(date) as date, count(*) as row_count 
+    FROM artist_landing
+    GROUP BY date
+TYPE Materialized
+DATASOURCE artist_mv

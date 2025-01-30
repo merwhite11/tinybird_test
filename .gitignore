@@ -1,4 +1,5 @@
 *-env
 .tinyb
 .env
-
+.DS_Store
+tb_env

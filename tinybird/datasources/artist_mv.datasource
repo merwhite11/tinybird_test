@@ -1,7 +1,7 @@
 
 SCHEMA >
     `date` Date,
-    `row_count` AggregateFunction(count, Int16)
+    `row_count` AggregateFunction(count, Int64)
 
 ENGINE "AggregatingMergeTree"
 ENGINE_PARTITION_KEY "toYear(date)"

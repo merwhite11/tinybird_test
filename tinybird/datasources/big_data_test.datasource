@@ -1,7 +1,6 @@
 
 SCHEMA >
     `artist` String `json:$.artist`,
-    `country_user` String `json:$.country_user`,
     `date` DateTime64(3) `json:$.date`,
     `fecha_liquidacion` Date `json:$.fecha_liquidacion`,
     `genre` String `json:$.genre`,

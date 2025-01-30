@@ -3,7 +3,6 @@ TOKEN "cuckoo_test_pipe_2882_endpoint_read_5385" READ
 NODE cuckoo_test_pipe_2882_0
 SQL >
 
-    %
     SELECT * FROM cuckoo_test
     WHERE country_user={{String(country, 'US')}}
     AND user_id > {{Int16(user_id, 700)}}
